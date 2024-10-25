@@ -11,10 +11,10 @@ export default defineConfig({
       canonicalURL: 'https://feature-tour.netlify.app'
     }),
     new ContentfulContentSource({
-      spaceId: 'm7sm67fcit2i',       // replace with your actual space ID
-      previewToken: 'MlURUe50wGm9tt7328rmGq8IOrQXNelWRbEfSxzE91c',
-      accessToken: 'GHupeYjVjlS02-_WJIDk36jeHyqIEddl_4PRJd0EwcI',
-      environment: 'master',                       // adjust if you use different environments
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+      environment: process.env.CONTENTFUL_ENVIRONMENT,
+      previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
+      accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN                   // adjust if you use different environments
     })
   ],
 });
