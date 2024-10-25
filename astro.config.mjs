@@ -10,9 +10,10 @@ export default defineConfig({
     sitemap({
       canonicalURL: 'https://feature-tour.netlify.app'
     }),
-    ContentfulContentSource({
+    new ContentfulContentSource({
       spaceId: 'm7sm67fcit2i',       // replace with your actual space ID
-      accessToken: 'GHupeYjVjlS02-_WJIDk36jeHyqIEddl_4PRJd0EwcI',    // replace with your actual API key
+      previewToken: 'MlURUe50wGm9tt7328rmGq8IOrQXNelWRbEfSxzE91c',
+      accessToken: 'GHupeYjVjlS02-_WJIDk36jeHyqIEddl_4PRJd0EwcI',
       environment: 'master',                       // adjust if you use different environments
     })
   ],
