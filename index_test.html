@@ -5,33 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WISH Well-Being Measurement</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        main {
-            flex: 1;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        .custom-content {
-            margin-bottom: 40px;
-        }
-        
-        .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-    </style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden; /* Added to prevent horizontal scrolling */
+        width: 100%;
+        max-width: 100%; /* Added to ensure body doesn't exceed viewport */
+        box-sizing: border-box; /* Added for proper width calculation */
+    }
+    
+    * {
+        box-sizing: border-box; /* Added for all elements */
+    }
+    
+    main {
+        flex: 1;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .custom-content {
+        margin-bottom: 40px;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+</style>
 </head>
 <body>
     <!-- Navigation bar -->
