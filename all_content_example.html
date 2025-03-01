@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .custom-content {
+            margin-bottom: 40px;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div data-include="components/navbar.html" data-site-name="My Website"></div>
+    
+    <main>
+        <h1>Welcome to My Website</h1>
+        
+        <p class="intro-text">This is a demonstration of a modular website built with HTML components using a custom includes system.</p>
+        
+        <!-- Table of Contents -->
+        <div data-include="components/table-of-contents.html" data-title="On This Page"></div>
+        
+        <!-- First content section -->
+        <div data-include="components/content-header.html" 
+             data-id="features-section"
+             data-title="Key Features" 
+             data-points="Modular components,Easy customization,Fast loading,Mobile-friendly design"></div>
+        
+        <div class="custom-content">
+            <p>Our modular component system makes it easy to build consistent websites with reusable parts. Here are some of the benefits:</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                <div style="flex: 1; min-width: 250px; background: #f8f8f8; padding: 20px; border-radius: 5px;">
+                    <h3>Modular Design</h3>
+                    <p>Components can be reused across multiple pages, ensuring consistency throughout your site.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 250px; background: #f8f8f8; padding: 20px; border-radius: 5px;">
+                    <h3>Customizable</h3>
+                    <p>Each component instance can be customized with data attributes, making them flexible for different contexts.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second content section -->
+        <div data-include="components/content-header.html" 
+             data-id="getting-started"
+             data-title="Getting Started" 
+             data-points="Download the template,Customize your components,Add content to your pages,Deploy to Netlify"></div>
+        
+        <div class="custom-content">
+            <p>To get started with this template, follow these steps:</p>
+            
+            <ol style="line-height: 1.6;">
+                <li><strong>Download the template</strong> - Clone the repository or download the files.</li>
+                <li><strong>Customize your components</strong> - Modify the HTML files in the components directory.</li>
+                <li><strong>Add content to your pages</strong> - Create new HTML pages and include your components.</li>
+                <li><strong>Deploy to Netlify</strong> - Upload your files to Netlify for fast, reliable hosting.</li>
+            </ol>
+            
+            <p>For more detailed instructions, check out the documentation.</p>
+        </div>
+        
+        <!-- Logo Grid -->
+        <div data-include="components/content-header.html" 
+             data-id="partners"
+             data-title="Our Partners" 
+             data-points="Trusted by leading organizations,Collaborative partnerships since 2020"></div>
+        
+        <div data-include="components/logo-grid.html" 
+             data-title="Trusted Partners" 
+             data-description="We work with amazing companies around the world"
+             data-logos='[
+                {"name": "Company 1", "image": "https://via.placeholder.com/150/0066cc/FFFFFF?text=Logo+1", "url": "#"},
+                {"name": "Company 2", "image": "https://via.placeholder.com/150/cc6600/FFFFFF?text=Logo+2", "url": "#"},
+                {"name": "Company 3", "image": "https://via.placeholder.com/150/00cc66/FFFFFF?text=Logo+3", "url": "#"},
+                {"name": "Company 4", "image": "https://via.placeholder.com/150/cc0066/FFFFFF?text=Logo+4", "url": "#"},
+                {"name": "Company 5", "image": "https://via.placeholder.com/150/6600cc/FFFFFF?text=Logo+5", "url": "#"},
+                {"name": "Company 6", "image": "https://via.placeholder.com/150/66cc00/FFFFFF?text=Logo+6", "url": "#"}
+             ]'></div>
+    </main>
+    
+    <!-- Footer -->
+    <div data-include="components/footer.html"></div>
+    
+    <!-- Include the JavaScript file that handles the component loading -->
+    <script src="js/includes.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+<div class="contact-card">
+    <div class="card-container">
+        <div class="card-left">
+            <h2 class="card-title">{{name}}</h2>
+            <img src="{{image}}" alt="{{name}}" class="card-image">
+        </div>
+        <div class="card-right">
+            <div class="card-details">
+                <p><strong>Job Title:</strong> {{job-title}}</p>
+                <p><strong>Institution:</strong> {{job-institution}}</p>
+                <p><strong>Department:</strong> {{job-department}}</p>
+                <p><strong>Location:</strong> {{location}}</p>
+                <p><strong>About:</strong> {{about}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="{{website-url}}" class="website-link" target="_blank">{{website-text}}</a>
+    </div>
+</div>
+
+<style>
+    .contact-card {
+        width: 100%;
+        max-width: 800px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 30px auto;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+    
+    .card-container {
+        display: flex;
+        padding: 20px;
+    }
+    
+    .card-left {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        padding-right: 20px;
+    }
+    
+    .card-title {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #333;
+        font-size: 1.5em;
+    }
+    
+    .card-image {
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-right {
+        width: 65%;
+    }
+    
+    .card-details p {
+        margin: 8px 0;
+        line-height: 1.5;
+    }
+    
+    .card-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px 20px;
+        background-color: #f8f8f8;
+        border-top: 1px solid #eee;
+    }
+    
+    .website-link {
+        display: inline-block;
+        color: #0066cc;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+    
+    .website-link:hover {
+        background-color: #0066cc;
+        color: white;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 650px) {
+        .card-container {
+            flex-direction: column;
+        }
+        
+        .card-left, .card-right {
+            width: 100%;
+            padding-right: 0;
+        }
+        
+        .card-left {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .card-image {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+</style>

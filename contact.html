@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact WISH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .custom-content {
+            margin-bottom: 40px;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div data-include="components/navbar.html" data-site-name="WISH"></div>
+    
+    <main>
+        <p>Use the Google Form below.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzBwlUDg8Tb0Z_vwu5olLxgOmzX1YUEGZD0f-vztCgiTlLkQ/viewform?embedded=true" width="640" height="586" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </main>
+    
+    <!-- Footer -->
+    <div data-include="components/footer.html"></div>
+    
+    <!-- Include the JavaScript file that handles the component loading -->
+    <script src="js/includes.js"></script>
+</body>
+</html>
