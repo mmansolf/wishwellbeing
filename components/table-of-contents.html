@@ -1,0 +1,63 @@
+<div class="table-of-contents">
+    <h2 class="toc-title">{{title}}</h2>
+    <div class="toc-loading">Loading table of contents...</div>
+</div>
+
+<style>
+    .table-of-contents {
+        background-color: #f8f8f8;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .toc-title {
+        font-size: 1.3rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .toc-list {
+        list-style: none;
+        padding-left: 10px;
+        margin: 0;
+    }
+    
+    .toc-item {
+        margin-bottom: 10px;
+        position: relative;
+    }
+    
+    .toc-item:before {
+        content: "•";
+        position: absolute;
+        left: -15px;
+        color: #0066cc;
+    }
+    
+    .toc-link {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    
+    .toc-link:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+    
+    .toc-loading {
+        color: #888;
+        font-style: italic;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .table-of-contents {
+            padding: 15px;
+        }
+    }
+</style>

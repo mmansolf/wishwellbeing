@@ -1,0 +1,84 @@
+<section class="content-header" id="{{id}}">
+    <h2 class="content-title">{{title}}</h2>
+    <div class="key-points">
+        <ul class="key-points-list">
+            <!-- Key points will be dynamically added by JavaScript -->
+        </ul>
+    </div>
+</section>
+
+<style>
+    .content-header {
+        margin-bottom: 20px;
+        padding-top: 20px; /* Space for scrolling to anchor */
+        margin-top: -20px; /* Offset the padding for normal flow */
+    }
+    
+    .content-title {
+        color: #333;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 8px;
+    }
+    
+    .key-points {
+        background-color: #f8f8f8;
+        padding: 15px 20px;
+        border-left: 4px solid #0066cc;
+        margin-bottom: 20px;
+    }
+    
+    .key-points-list {
+        margin: 0;
+        padding-left: 20px;
+    }
+    
+    .key-points-list li {
+        margin-bottom: 8px;
+    }
+    
+    .key-points-list li:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .content-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        // Get the parent element
+        const headerElement = document.currentScript.closest('.content-header');
+        const pointsList = headerElement.querySelector('.key-points-list');
+        
+        // Get the points data from attribute
+        let pointsStr = headerElement.getAttribute('original-data-points') || '';
+        
+        // If no ID was provided, generate one based on the title
+        if (!headerElement.id) {
+            const title = headerElement.querySelector('.content-title').textContent;
+            headerElement.id = 'section-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        }
+        
+        // Split the points by comma and create list items
+        if (pointsStr) {
+            const points = pointsStr.split(',');
+            
+            points.forEach(point => {
+                if (point.trim()) {
+                    const li = document.createElement('li');
+                    li.textContent = point.trim();
+                    pointsList.appendChild(li);
+                }
+            });
+        } else {
+            // If no points were provided, hide the key points section
+            headerElement.querySelector('.key-points').style.display = 'none';
+        }
+    })();
+</script>
