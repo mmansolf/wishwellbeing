@@ -25,7 +25,7 @@
     .key-points {
         background-color: #f8f8f8;
         padding: 15px 20px;
-        border-left: 4px solid #0066cc;
+        border-left: 4px solid #555;
         margin-bottom: 20px;
     }
     
@@ -51,34 +51,58 @@
 </style>
 
 <script>
-    (function() {
-        // Get the parent element
-        const headerElement = document.currentScript.closest('.content-header');
-        const pointsList = headerElement.querySelector('.key-points-list');
+    document.addEventListener('allComponentsLoaded', function() {
+        // Get all content header elements
+        const headerElements = document.querySelectorAll('.content-header');
         
-        // Get the points data from attribute
-        let pointsStr = headerElement.getAttribute('original-data-points') || '';
-        
-        // If no ID was provided, generate one based on the title
-        if (!headerElement.id) {
-            const title = headerElement.querySelector('.content-title').textContent;
-            headerElement.id = 'section-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-        }
-        
-        // Split the points by comma and create list items
-        if (pointsStr) {
-            const points = pointsStr.split(',');
+        headerElements.forEach(function(headerElement) {
+            // Skip if this header has already been processed
+            if (headerElement.hasAttribute('data-processed')) return;
             
-            points.forEach(point => {
-                if (point.trim()) {
-                    const li = document.createElement('li');
-                    li.textContent = point.trim();
-                    pointsList.appendChild(li);
+            const pointsList = headerElement.querySelector('.key-points-list');
+            if (!pointsList) return;
+            
+            // Get the points data from attribute
+            // Check both data-points and original-data-points
+            let pointsStr = headerElement.getAttribute('data-points') || 
+                            headerElement.getAttribute('original-data-points') || '';
+            
+            // If no ID was provided, generate one based on the title
+            if (!headerElement.id) {
+                const title = headerElement.querySelector('.content-title').textContent;
+                headerElement.id = 'section-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            }
+            
+            // Clear any existing list items first to prevent duplication
+            pointsList.innerHTML = '';
+            
+            // Split the points by comma and create list items
+            if (pointsStr) {
+                const points = pointsStr.split(',');
+                
+                points.forEach(point => {
+                    if (point.trim()) {
+                        const li = document.createElement('li');
+                        li.textContent = point.trim();
+                        pointsList.appendChild(li);
+                    }
+                });
+                
+                // Make sure the key points section is visible
+                const keyPointsElement = headerElement.querySelector('.key-points');
+                if (keyPointsElement) {
+                    keyPointsElement.style.display = 'block';
                 }
-            });
-        } else {
-            // If no points were provided, hide the key points section
-            headerElement.querySelector('.key-points').style.display = 'none';
-        }
-    })();
+            } else {
+                // If no points were provided, hide the key points section
+                const keyPointsElement = headerElement.querySelector('.key-points');
+                if (keyPointsElement) {
+                    keyPointsElement.style.display = 'none';
+                }
+            }
+            
+            // Mark this header as processed to avoid duplication
+            headerElement.setAttribute('data-processed', 'true');
+        });
+    });
 </script>
