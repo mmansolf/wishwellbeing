@@ -1,0 +1,102 @@
+[
+  {
+    "date": "Jan 2025",
+    "title": "Dr. Higgins Speaks at NAM Plenary",
+    "description": "Presentation on measuring progress in healthcare worker well-being at the National Academy of Medicine's Plenary on Exploring Tools to Measure Progress.",
+    "category": "Conference",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://youtu.be/ktyiHoCac9Y",
+    "linkText": "Watch on YouTube"
+  },
+  {
+    "date": "June 2025",
+    "title": "WISH Validation Paper Published in Anesthesiology",
+    "description": "Full citation: Higgins KE 3rd, Wingert T, Duggan EW, Mansolf M, Carcamo JH, Park C. Measuring well-being influencers: Development and validation of the Well-Being Influencers Survey for Healthcare (WISH) inventory. Anesthesiology. 2025 May 13;142(6):1025-37. DOI: https://doi.org/10.1097/ALN.0000000000005401",
+    "category": "Manuscript",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://doi.org/10.1097/ALN.0000000000005401",
+    "linkText": "Read the Paper"
+  },
+  {
+    "date": "June 2026",
+    "title": "WISH Multicenter Paper Published in Anesthesiology",
+    "description": "Full Citation: Higgins KE 3rd, Mansolf M, Duggan EW, Wingert T, Vinson AE, Sinskey JL, Margolis R, Correll LR, Pappas H, Swisher JL, Rothschild L, Saddawi-Konefka D, Carey T, Was A, Durand MJ, Budd A, Hernandez Carcamo J, Park C. A multi-department investigation of occupational well-being, systemic features, and organizational outcomes in anesthesiology using the Well-Being Influencers Survey for Healthcare (WISH). Anesthesiology. DOI: https://doi.org/10.1097/aln.0000000000006186",
+    "category": "Manuscript",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://doi.org/10.1097/aln.0000000000006186",
+    "linkText": "Read the Paper"
+  },
+  {
+    "date": "Template Date",
+    "title": "Template Milestone",
+    "description": "Copy the structure of this object and add new milestones above this template. Set hidden to false to display.",
+    "category": "Template",
+    "image": "path/to/image.jpg",
+    "linkUrl": "https://example.com",
+    "linkText": "Learn more",
+    "hidden": true
+  },
+  {
+    "date": "July 2025",
+    "title": "Dr. Higgins on the Caring Greatly Podcast",
+    "description": "Dr. Elliott Higgins speaks with Heart of Safety Coalition’s Liz Boehm on WISH and shifting the focus to the environmental factors that shape occupational well-being for health workers.",
+    "category": "Media",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://www.stryker.com/content/m/hsc/en/index/podcast/validated-measurement-tool-assesses-care-team-wellbeing.html",
+    "linkText": "Click for Podcast Links"
+  },
+  {
+    "date": "November 2025",
+    "title": "Dr. Higgins on the ACGME Well-Being Podcast",
+    "description": "Dr. Elliott Higgins speaks with ACGME Vice President of Well-Being Dr. Stuart Slavin about WISH and emerging research on how cultures of well-being relate to critical outcomes in academic medicine.",
+    "category": "Media",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://podcasts.apple.com/us/podcast/shifting-the-lens-dr-elliott-higgins-on-measuring/id1547862312?i=1000737247209",
+    "linkText": "Click for Podcast (Apple)"
+  },
+  {
+    "date": "November 2025",
+    "title": "Drs. Higgins and Vinson on the ACCRAC Podcast with Jed Wolpaw",
+    "description": "Drs. Elliott Higgins and Amy Vinson join ACCRAC host Dr. Jed Wolpaw to discuss WISH and how it is changing the conversation on how we advocate for, research, and improve well-being in perioperative medicine and beyond.",
+    "category": "Media",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://accrac.com/episode-325-the-wish-inventory-and-well-being-in-anesthesiology-with-drs-higgins-and-vinson/",
+    "linkText": "Click for Podcast (ACCRAC)"
+  },
+  {
+    "date": "February 2025",
+    "title": "UCLA Newsroom: WISH Press Release",
+    "description": "A UCLA-led research team has developed a new tool designed to measure the root-cause drivers of healthcare worker well-being. Going beyond traditional assessments of burnout and professional fulfillment, the tool evaluates the systemic factors that influence well-being across the healthcare workforce.",
+    "category": "News",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://www.uclahealth.org/news/release/ucla-led-team-develops-and-validates-novel-tool-designed",
+    "linkText": "Read at UCLA Health"
+  },
+  {
+    "date": "October 2025",
+    "title": "WISH Team at the ASA Annual Meeting: Tackling the Well-Being Crisis",
+    "description": "Read about Drs. Higgins, Margolis, and Vinson at the 2025 American Society of Anesthesiologists Annual Meeting in San Antonio, Texas, presenting on WISH and the broader well-being crisis in anesthesiology and beyond.",
+    "category": "News",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://www.asameetingnewscentral.com/physician-well-being-burnout/article/22952348/tackling-the-wellbeing-crisis?since=1760418000000",
+    "linkText": "Read at ASA"
+  },
+  {
+    "date": "May 2026",
+    "title": "ACGME Blog featuring WISH: Advancing Well-Being in GME: Why Data, Systems, and Transitions Matter",
+    "description": "Read the ACGME Blog featuring WISH: Advancing Well-Being in GME: Why Data, Systems, and Transitions Matter.",
+    "category": "News",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://www.acgme.org/newsroom/blog/2026/05-may/advancing-well-being-in-gme-why-data-systems-and-transitions-matter/",
+    "linkText": "Read at ACGME"
+  },
+  {
+    "date": "May 2026",
+    "title": "WISH at SPA: One-Pager on Using WISH",
+    "description": "Read the Society of Pediatric Anesthesia One-Pager on using WISH to identify features of a healthy work environment.",
+    "category": "News",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://pedsanesthesia.org/wp-content/uploads/2026/05/Supportive-Work-Env_WISH-One-Pager-DC-edits-05_20_26-Clean.pdf",
+    "linkText": "Read at Society for Pediatric Anesthesia"
+  }
+]

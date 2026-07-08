@@ -1,0 +1,36 @@
+{
+  "quick-access": {
+    "title": "Get Started",
+    "buttons": [
+      {
+        "text": "Learn More About WISH",
+        "url": "wish.html"
+      },
+      {
+        "text": "Download the Well-Being Influencers Survey for Healthcare",
+        "url": "files/WISH_EHT_figure_NEW_1.pdf"
+      },
+      {
+        "text": "Ask Us a Question",
+        "url": "contact.html"
+      }
+    ]
+  },
+  "tool-domains": {
+    "title": "Explore Our Domains",
+    "buttons": [
+      {
+        "text": "Domain 1: Autonomy",
+        "url": "domains/autonomy.html"
+      },
+      {
+        "text": "Domain 2: Belonging",
+        "url": "domains/belonging.html"
+      },
+      {
+        "text": "Domain 3: Meaning",
+        "url": "domains/meaning.html"
+      }
+    ]
+  }
+}

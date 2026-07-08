@@ -1,0 +1,102 @@
+<div class="quick-access-container"></div>
+
+<style>
+    .quick-access-section {
+        margin: 2rem 0;
+    }
+
+    .quick-access-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .quick-access-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .quick-access-btn {
+        display: inline-block;
+        background: #0066cc;
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.2s ease;
+        font-size: 0.95rem;
+        text-align: center;
+        flex: 0 1 auto;
+        min-width: 200px;
+    }
+
+    .quick-access-btn:hover {
+        background: #0052a3;
+    }
+
+    @media (max-width: 650px) {
+        .quick-access-btn {
+            min-width: 100%;
+            flex: 1 1 100%;
+        }
+
+        .quick-access-title {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('allComponentsLoaded', function() {
+    const container = document.querySelector('.quick-access-container');
+    if (!container) return;
+
+    const section = container.parentElement.getAttribute('data-section');
+    if (!section) {
+        console.error('No data-section specified for quick-access component');
+        return;
+    }
+
+    fetch('data/quick-access.json')
+        .then(response => response.json())
+        .then(data => {
+            const sectionData = data[section];
+            if (!sectionData) {
+                console.error(`Section "${section}" not found in quick-access.json`);
+                container.innerHTML = '<p>Error: Section not found</p>';
+                return;
+            }
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'quick-access-section';
+
+            const title = document.createElement('h2');
+            title.className = 'quick-access-title';
+            title.textContent = sectionData.title;
+            wrapper.appendChild(title);
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'quick-access-buttons';
+
+            sectionData.buttons.forEach(btn => {
+                const link = document.createElement('a');
+                link.className = 'quick-access-btn';
+                link.href = btn.url;
+                link.textContent = btn.text;
+                buttonContainer.appendChild(link);
+            });
+
+            wrapper.appendChild(buttonContainer);
+            container.parentElement.replaceChild(wrapper, container);
+        })
+        .catch(error => {
+            console.error('Error loading quick-access:', error);
+            container.innerHTML = '<p>Error loading buttons</p>';
+        });
+});
+</script>

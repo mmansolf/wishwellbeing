@@ -1,0 +1,189 @@
+<div class="milestone-feed"></div>
+
+<style>
+    .milestone-card {
+        width: 100%;
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        margin-bottom: 1.5rem;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .milestone-left {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        padding: 1.5rem;
+        border-right: 1px solid #eee;
+        align-items: center;
+        text-align: center;
+    }
+
+    .milestone-date {
+        font-size: 0.875rem;
+        color: #666;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .milestone-category-badge {
+        display: inline-block;
+        background: #0066cc;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: bold;
+        padding: 0.35rem 0.75rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 1rem;
+    }
+
+    .milestone-image {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .milestone-right {
+        width: 65%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .milestone-title {
+        margin: 0 0 0.75rem 0;
+        font-size: 1.25rem;
+        color: #333;
+        line-height: 1.3;
+    }
+
+    .milestone-description {
+        margin: 0 0 1.5rem 0;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .milestone-cta {
+        align-self: flex-start;
+        display: inline-block;
+        background: #0066cc;
+        color: white;
+        padding: 0.75rem 1.25rem;
+        border-radius: 4px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.2s ease;
+    }
+
+    .milestone-cta:hover {
+        background: #0052a3;
+    }
+
+    @media (max-width: 650px) {
+        .milestone-card {
+            flex-direction: column;
+        }
+
+        .milestone-left {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #eee;
+            padding: 1rem;
+        }
+
+        .milestone-right {
+            width: 100%;
+        }
+
+        .milestone-image {
+            max-width: 150px;
+        }
+
+        .milestone-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<script>
+document.addEventListener('allComponentsLoaded', function() {
+    const container = document.querySelector('.milestone-feed');
+    if (!container) return;
+
+    fetch('data/milestone-data.json')
+        .then(response => response.json())
+        .then(milestones => {
+            const cards = milestones
+                .filter(milestone => !milestone.hidden)
+                .map(milestone => {
+                const card = document.createElement('div');
+                card.className = 'milestone-card';
+                card.setAttribute('data-date', milestone.date);
+
+                const left = document.createElement('div');
+                left.className = 'milestone-left';
+
+                const dateSpan = document.createElement('span');
+                dateSpan.className = 'milestone-date';
+                dateSpan.textContent = milestone.date;
+                left.appendChild(dateSpan);
+
+                const badge = document.createElement('span');
+                badge.className = 'milestone-category-badge';
+                badge.textContent = milestone.category;
+                left.appendChild(badge);
+
+                if (milestone.image) {
+                    const img = document.createElement('img');
+                    img.className = 'milestone-image';
+                    img.src = milestone.image;
+                    img.alt = milestone.title;
+                    left.appendChild(img);
+                }
+
+                const right = document.createElement('div');
+                right.className = 'milestone-right';
+
+                const title = document.createElement('h3');
+                title.className = 'milestone-title';
+                title.textContent = milestone.title;
+                right.appendChild(title);
+
+                const description = document.createElement('p');
+                description.className = 'milestone-description';
+                description.textContent = milestone.description;
+                right.appendChild(description);
+
+                if (milestone.linkUrl && milestone.linkText) {
+                    const link = document.createElement('a');
+                    link.className = 'milestone-cta';
+                    link.href = milestone.linkUrl;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.textContent = milestone.linkText + ' →';
+                    right.appendChild(link);
+                }
+
+                card.appendChild(left);
+                card.appendChild(right);
+                return { card: card, dateObj: new Date(milestone.date) };
+            });
+
+            cards.sort((a, b) => b.dateObj - a.dateObj);
+            cards.forEach(item => container.appendChild(item.card));
+        })
+        .catch(error => {
+            console.error('Error loading milestones:', error);
+            container.innerHTML = '<p>Error loading milestones</p>';
+        });
+});
+</script>

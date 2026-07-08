@@ -6,7 +6,25 @@
     <title>WISH Well-Being Measurement</title>
     <link rel="stylesheet" href="css/global.css">
     <style>
-        /* Page-specific styles can go here */
+        .quick-access-wrapper {
+            margin: 2rem 0;
+        }
+
+        .milestone-section-header {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .milestone-feed {
+            margin-top: 1.5rem;
+        }
     </style>
 </head>
 <body>
@@ -17,26 +35,18 @@
         <h1>Welcome to WISH</h1>
         
         <p class="intro-text"><b>We are a consortium dedicated to advancing the science and practice of healthcare worker well-being improvement. </b>Our multiprofessional team develops rigorous measurement tools and evidence-based frameworks to drive meaningful, systems-level change. At the heart of our work is the belief that improving our systems can pave the way to more sustainable and more fulfilling careers in healthcare.</p>
-        <p class="intro-text">The cornerstone of our efforts is the <b>Well-Being Influencers Survey for Healthcare (WISH)</b>—a validated survey tool that quantifies the complex construct of healthcare worker well-being through a systems lens. By assessing and highlighting the factors that shape workplace experience, we help clarify what meaningful well-being prioritization looks like—not just for clinicians, but for the long-term stability of healthcare organizations and the quality of patient care. <b></p>
-        <h2><a href="wish.html">Learn More About WISH</a></b></h2>
-        <h2><a href="files/WISH_EHT_figure_NEW_1.pdf">Download the Well-Being Influencers Survey for Healthcare</a></b></h2>
-
-        <h2>Watch Dr. Higgins at the 2025 National Academy of Medicine Plenary: Exploring Tools to Measure Progress (starts at 17:25)</h2>
-<div style="position: relative; width: 100%; padding-bottom: 56.25%;">
-  <iframe 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-    src="https://www.youtube-nocookie.com/embed/ktyiHoCac9Y?si=_sTCtDbT7skz2VUk" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-</div>
-        <p><i>Note:</i> If the embedded video does not play, <a href="https://youtu.be/ktyiHoCac9Y">click this link</a> to watch the video on YouTube.
+        <p class="intro-text">The cornerstone of our efforts is the <b>Well-Being Influencers Survey for Healthcare (WISH)</b>—a validated survey tool that quantifies the complex construct of healthcare worker well-being through a systems lens. By assessing and highlighting the factors that shape workplace experience, we help clarify what meaningful well-being prioritization looks like—not just for clinicians, but for the long-term stability of healthcare organizations and the quality of patient care. </p>
         
-        <!-- Table of Contents -->
-        <!-- <div data-include="components/table-of-contents.html" data-title="On This Page"></div> -->
+        <!-- Quick Access Section -->
+        <div class="quick-access-wrapper">
+            <div data-include="components/quick-access.html" data-section="quick-access"></div>
+        </div>
+        
+        <!-- Recent Updates & Milestones -->
+        <div class="milestone-section-header">Recent Updates & Milestones</div>
+        
+        <!-- Milestones component -->
+        <div data-include="components/milestone-card.html"></div>
         
     </main>
     

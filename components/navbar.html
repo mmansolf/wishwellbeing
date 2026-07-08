@@ -1,7 +1,9 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-logo">
-            <a href="index.html">{{site-name}}</a>
+            <a href="index.html">
+                <img src="images/Wish_Logo_Black_Rainbow_2x.png" alt="WISH Logo" class="navbar-logo-img">
+            </a>
         </div>
         
         <button class="navbar-toggle" aria-label="Toggle navigation menu">
@@ -21,13 +23,13 @@
 
 <style>
     .navbar {
-        background-color: #333;
-        color: white;
+        background-color: #fff;
+        color: #333;
         position: sticky;
         top: 0;
         width: 100%;
         z-index: 1000;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #ddd;
     }
     
     .navbar-container {
@@ -37,14 +39,19 @@
         padding: 0 20px;
         max-width: 1200px;
         margin: 0 auto;
-        height: 60px;
+        height: 70px;
     }
     
     .navbar-logo a {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
+        display: flex;
+        align-items: center;
         text-decoration: none;
+    }
+    
+    .navbar-logo-img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
     }
     
     .navbar-menu {
@@ -59,7 +66,7 @@
     }
     
     .navbar-link {
-        color: white;
+        color: #333;
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 4px;
@@ -67,7 +74,7 @@
     }
     
     .navbar-link:hover {
-        background-color: #555;
+        background-color: #f0f0f0;
     }
     
     .navbar-toggle {
@@ -82,7 +89,7 @@
         display: block;
         width: 25px;
         height: 3px;
-        background-color: white;
+        background-color: #333;
         margin: 5px 0;
         transition: transform 0.3s, opacity 0.3s;
     }
@@ -95,14 +102,15 @@
         
         .navbar-menu {
             position: absolute;
-            top: 60px;
+            top: 70px;
             left: 0;
             right: 0;
             flex-direction: column;
-            background-color: #333;
+            background-color: #fff;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
+            border-bottom: 1px solid #ddd;
         }
         
         .navbar-menu.active {
@@ -120,7 +128,8 @@
             display: block;
             padding: 15px;
             border-radius: 0;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #eee;
+            color: #333;
         }
     }
 </style>
