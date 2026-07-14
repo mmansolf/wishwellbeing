@@ -1,5 +1,14 @@
 [
-  {
+    {
+    "date": "July 2026",
+    "title": "WISH Multicenter Manuscript Featured in Healthcare Well-being Offerings (HWO)",
+    "description": "Our manuscript, “A Multi-Department Investigation of Occupational Well-Being, Systemic Features, and Organizational Outcomes in Anesthesiology Using the Well-Being Influencers Survey for Healthcare (WISH)”, has been featured in the June 2026 edition of Healthcare Well-being Offerings (HWO). HWO is a platform dedicated to curating and spotlighting impactful contributions to the healthcare well-being field, and aims to highlight timely, innovative, and thought-provoking publications that help move the field forward and keep stakeholders across disciplines informed.",
+    "category": "News",
+    "image": "images/Wish_Logo_Black_Rainbow_2x.png",
+    "linkUrl": "https://www.healthcarewellbeing.org/june2026",
+    "linkText": "View on HWO"
+    },
+    {
     "date": "Jan 2025",
     "title": "Dr. Higgins Speaks at NAM Plenary",
     "description": "Presentation on measuring progress in healthcare worker well-being at the National Academy of Medicine's Plenary on Exploring Tools to Measure Progress.",
